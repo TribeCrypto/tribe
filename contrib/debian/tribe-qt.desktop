@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Tribe
+Comment=Tribe P2P Cryptocurrency
+Comment[fr]=Tribe, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Tribe, eşten eşe kriptografik sanal para birimi
+Exec=tribe-qt %u
+Terminal=false
+Type=Application
+Icon=tribe128
+MimeType=x-scheme-handler/tribe;
+Categories=Office;Finance;

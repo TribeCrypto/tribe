@@ -1,0 +1,6 @@
+usr/local/bin/tribe-qt usr/bin
+share/pixmaps/tribe32.xpm usr/share/pixmaps
+share/pixmaps/tribe16.xpm usr/share/pixmaps
+share/pixmaps/tribe128.png usr/share/pixmaps
+debian/tribe-qt.desktop usr/share/applications
+debian/tribe-qt.protocol usr/share/kde4/services/

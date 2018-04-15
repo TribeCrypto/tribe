@@ -1,0 +1,11 @@
+[Protocol]
+exec=tribe-qt '%u'
+protocol=tribe
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

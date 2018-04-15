@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/tribe_bg.qm</file>
+        <file alias="de">locale/tribe_de.qm</file>
+        <file alias="en">locale/tribe_en.qm</file>
+        <file alias="es">locale/tribe_es.qm</file>
+        <file alias="fi">locale/tribe_fi.qm</file>
+        <file alias="fr">locale/tribe_fr.qm</file>
+        <file alias="it">locale/tribe_it.qm</file>
+        <file alias="ja">locale/tribe_ja.qm</file>
+        <file alias="pl">locale/tribe_pl.qm</file>
+        <file alias="pt">locale/tribe_pt.qm</file>
+        <file alias="ru">locale/tribe_ru.qm</file>
+        <file alias="sk">locale/tribe_sk.qm</file>
+        <file alias="sv">locale/tribe_sv.qm</file>
+        <file alias="vi">locale/tribe_vi.qm</file>
+        <file alias="zh_CN">locale/tribe_zh_CN.qm</file>
+        <file alias="zh_TW">locale/tribe_zh_TW.qm</file>
+    </qresource>
+</RCC>

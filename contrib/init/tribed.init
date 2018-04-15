@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  tribed The tribe core server.
+#
+#
+# chkconfig: 345 80 20
+# description: tribed
+# processname: tribed
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/tribed, see below
+if [ -f /etc/sysconfig/tribed ]; then
+        . /etc/sysconfig/tribed
+fi
+
+RETVAL=0
+
+prog=tribed
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/tribed
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/tribed}
+
+# tribed defaults to /usr/bin/tribed, override with BITCOIND_BIN
+tribed=${BITCOIND_BIN-/usr/bin/tribed}
+
+# tribed opts default to -disablewallet, override with BITCOIND_OPTS
+tribed_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $tribed $tribed_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

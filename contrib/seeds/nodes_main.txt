@@ -1,0 +1,5 @@
+# List of fixed seed nodes for testnet
+13.81.82.28:9399
+13.95.198.229:9399
+
+# Onion nodes
