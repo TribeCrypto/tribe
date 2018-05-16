@@ -176,8 +176,8 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRIBE&lt;/b&gt;!</source>
-        <translation>Upozornenie: Ak zašifrujete vašu peňaženku a stratíte prístupové heslo, potom &lt;b&gt;prídete o všetky svoje TRIBE-y&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRB&lt;/b&gt;!</source>
+        <translation>Upozornenie: Ak zašifrujete vašu peňaženku a stratíte prístupové heslo, potom &lt;b&gt;prídete o všetky svoje TRB-y&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -863,28 +863,28 @@ Adresa: %4</translation>
         <translation>Prosím vyberte úroveň súkromia.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Použiť 2 rozdielne masternode pre fixovanie prostriedkov až do 1000 TRIBE</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Použiť 2 rozdielne masternode pre fixovanie prostriedkov až do 1000 TRB</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Použiť 8 rozdielnych masternode pre fixovanie prostriedkov až do 1000 TRIBE</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Použiť 8 rozdielnych masternode pre fixovanie prostriedkov až do 1000 TRB</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Použiť 16 rozdielnych masternode</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Táto možnosť je najrýchlejšia a bude stáť približne 0.025 TRIBE pre anonimizáciu 1000 TRIBE</translation>
+        <source>This option is the quickest and will cost about ~0.025 TRB to anonymize 1000 TRB</source>
+        <translation>Táto možnosť je najrýchlejšia a bude stáť približne 0.025 TRB pre anonimizáciu 1000 TRB</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Táto možnosť je stredne rýchla bude stáť približne 0.05 TRIBE pre anonimizáciu 1000 TRIBE</translation>
+        <source>This option is moderately fast and will cost about 0.05 TRB to anonymize 1000 TRB</source>
+        <translation>Táto možnosť je stredne rýchla bude stáť približne 0.05 TRB pre anonimizáciu 1000 TRB</translation>
     </message>
     <message>
-        <source>0.1 TRIBE per 1000 TRIBE you anonymize.</source>
-        <translation>0.1 TRIBE za 1000 TRIBE ktoré spravíte anonymnými.</translation>
+        <source>0.1 TRB per 1000 TRB you anonymize.</source>
+        <translation>0.1 TRB za 1000 TRB ktoré spravíte anonymnými.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1430,8 +1430,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Čiastka a kolá:</translation>
     </message>
     <message>
-        <source>0 TRIBE / 0 Rounds</source>
-        <translation>0 TRIBE / 0 Kôl</translation>
+        <source>0 TRB / 0 Rounds</source>
+        <translation>0 TRB / 0 Kôl</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -3275,8 +3275,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Poslať Bitcoins</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRIBE.</source>
-        <translation>InstantX zatiaľ nepodporuje posielanie takto vysokých čiastok. Transakcie sú limitované na %1 TRIBE.</translation>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRB.</source>
+        <translation>InstantX zatiaľ nepodporuje posielanie takto vysokých čiastok. Transakcie sú limitované na %1 TRB.</translation>
     </message>
 </context>
 <context>
@@ -3389,8 +3389,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Nedá sa nájsť dostatok denominácií Darksend pre túto transakciu. </translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Nedá sa nájsť dostatok ne-denominovaných Darksend zdrojov pre túto transakciu, ktoré nie sú rovné 1000 TRIBE.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Nedá sa nájsť dostatok ne-denominovaných Darksend zdrojov pre túto transakciu, ktoré nie sú rovné 1000 TRB.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3633,12 +3633,12 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Chyba: Nájdený nepodporovaný argument -socks. Nastavenie SOCKS verzie nie je už možné, podporované sú už iba proxy SOCKS5.</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Poplatky (v TRIBE za Kb) menšie ako toto, sú považované za nulový poplatok pre prenos (predvolené: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Poplatky (v TRB za Kb) menšie ako toto, sú považované za nulový poplatok pre prenos (predvolené: %s)</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Poplatky (v TRIBE za Kb) menšie ako toto, sú považované za nulový transakčný poplatok (predvolené: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Poplatky (v TRB za Kb) menšie ako toto, sú považované za nulový transakčný poplatok (predvolené: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3733,8 +3733,8 @@ napríklad: alertnotify=echo %%s | mail -s "Tribe Upozornenie" admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Nenašiel sa dostatok prostriedkov pre túto transakciu, ktorú nie sú rovné 1000 TRIBE.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Nenašiel sa dostatok prostriedkov pre túto transakciu, ktorú nie sú rovné 1000 TRB.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3847,8 +3847,8 @@ napríklad: alertnotify=echo %%s | mail -s "Tribe Upozornenie" admin@foo.com
         <translation>Chyba: nájdený nepodporovaný argument -tor, použite -onion.</translation>
     </message>
     <message>
-        <source>Fee (in TRIBE/kB) to add to transactions you send (default: %s)</source>
-        <translation>Pridať poplatok (v TRIBE za kB) do transakcií ktoré posielate (predvolené: %s)</translation>
+        <source>Fee (in TRB/kB) to add to transactions you send (default: %s)</source>
+        <translation>Pridať poplatok (v TRB za kB) do transakcií ktoré posielate (predvolené: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4215,8 +4215,8 @@ napríklad: alertnotify=echo %%s | mail -s "Tribe Upozornenie" admin@foo.com
         <translation>Kľúč KeePassHttp pre šifrovanú AES komunikáciu s KeePass</translation>
     </message>
     <message>
-        <source>Keep N TRIBE anonymized (default: %u)</source>
-        <translation>Udržiavať N TRIBE anonymizovaných (predvolené: %u)</translation>
+        <source>Keep N TRB anonymized (default: %u)</source>
+        <translation>Udržiavať N TRB anonymizovaných (predvolené: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

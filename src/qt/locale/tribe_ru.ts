@@ -176,8 +176,8 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRIBE&lt;/b&gt;!</source>
-        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ TRIBE&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRB&lt;/b&gt;!</source>
+        <translation>Внимание: если Вы зашифруете кошелёк и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ TRB&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -864,28 +864,28 @@ Address: %4
         <translation>Пожалуйста, выберите уровень приватности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Использовать 2 отдельные мастерноды для перемешивания до 1000 TRIBE</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Использовать 2 отдельные мастерноды для перемешивания до 1000 TRB</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Использовать 8 отдельных мастернод для перемешивания до 1000 TRIBE</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Использовать 8 отдельных мастернод для перемешивания до 1000 TRB</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Использовать 16 отдельных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Это самый быстрый вариант, анонимизация 1000 TRIBE будет стоить вам примерно 0.025 TRIBE</translation>
+        <source>This option is the quickest and will cost about ~0.025 TRB to anonymize 1000 TRB</source>
+        <translation>Это самый быстрый вариант, анонимизация 1000 TRB будет стоить вам примерно 0.025 TRB</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Это относительно быстрый вариант, анонимизация 1000 TRIBE будет стоить вам примерно 0.05 TRIBE</translation>
+        <source>This option is moderately fast and will cost about 0.05 TRB to anonymize 1000 TRB</source>
+        <translation>Это относительно быстрый вариант, анонимизация 1000 TRB будет стоить вам примерно 0.05 TRB</translation>
     </message>
     <message>
-        <source>0.1 TRIBE per 1000 TRIBE you anonymize.</source>
-        <translation>0.1 TRIBE за каждые анонимизированные 1000 TRIBE.</translation>
+        <source>0.1 TRB per 1000 TRB you anonymize.</source>
+        <translation>0.1 TRB за каждые анонимизированные 1000 TRB.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1431,8 +1431,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Сумма и раунды:</translation>
     </message>
     <message>
-        <source>0 TRIBE / 0 Rounds</source>
-        <translation>0 TRIBE / 0 раундов</translation>
+        <source>0 TRB / 0 Rounds</source>
+        <translation>0 TRB / 0 раундов</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -3276,8 +3276,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Отправка</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRIBE.</source>
-        <translation>InstantX пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 TRIBE.</translation>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRB.</source>
+        <translation>InstantX пока что не поддерживает такие большие суммы. На данный момент транзакции ограничены суммами до %1 TRB.</translation>
     </message>
 </context>
 <context>
@@ -3390,7 +3390,7 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции номиналов Darksend.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRIBE.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRB.</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000DRK.</translation>
     </message>
     <message>
@@ -3634,12 +3634,12 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Ошибка: Обнаружен неподдерживаемый аргумент -socks. Выбор версии SOCKS больше невозможен, поддерживаются только прокси версии SOCKS5.</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Комиссии (в TRIBE/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Комиссии (в TRB/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Комиссии (в TRIBE/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Комиссии (в TRB/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3734,7 +3734,7 @@ rpcpassword=%s
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRIBE.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRB.</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции средств, отличающихся от 1000DRK.</translation>
     </message>
     <message>
@@ -3848,8 +3848,8 @@ rpcpassword=%s
         <translation>Ошибка: Обнаружен неподдерживаемый параметр -tor, используйте -onion вместо него.</translation>
     </message>
     <message>
-        <source>Fee (in TRIBE/kB) to add to transactions you send (default: %s)</source>
-        <translation>Комиссии (в TRIBE/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
+        <source>Fee (in TRB/kB) to add to transactions you send (default: %s)</source>
+        <translation>Комиссии (в TRB/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4216,8 +4216,8 @@ rpcpassword=%s
         <translation>Ключ KeePassHttp для зашифрованной коммуникации с KeePass</translation>
     </message>
     <message>
-        <source>Keep N TRIBE anonymized (default: %u)</source>
-        <translation>Держать N TRIBE анонимизированными (по умолчанию: %u)</translation>
+        <source>Keep N TRB anonymized (default: %u)</source>
+        <translation>Держать N TRB анонимизированными (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

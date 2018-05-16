@@ -176,8 +176,8 @@
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRIBE&lt;/b&gt;!</source>
-        <translation>Внимание: Ако шифрирате вашия портфейл и загубите паролата си,  &lt;b&gt;ЩЕ ЗАГУБИТЕ ВСИЧКИ TRIBE МОНЕТИ!&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRB&lt;/b&gt;!</source>
+        <translation>Внимание: Ако шифрирате вашия портфейл и загубите паролата си,  &lt;b&gt;ЩЕ ЗАГУБИТЕ ВСИЧКИ TRB МОНЕТИ!&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -864,28 +864,28 @@ Address: %4
         <translation>Моля изберете ниво на сигурност.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Използване на 2 различни masternodes за смесване на средства до 1000 TRIBE</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Използване на 2 различни masternodes за смесване на средства до 1000 TRB</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 TRIBE</source>
-        <translation>Използване на 8 различни masternodes за смесване на средства до 1000 TRIBE</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 TRB</source>
+        <translation>Използване на 8 различни masternodes за смесване на средства до 1000 TRB</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
-        <translation>Използване на 16 различни masternodes за смесване на средства до 1000 TRIBE</translation>
+        <translation>Използване на 16 различни masternodes за смесване на средства до 1000 TRB</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Това е най-бързият вариант, анонимизиране на 1000 TRIBE ще ви струва около 0.025 TRIBE</translation>
+        <source>This option is the quickest and will cost about ~0.025 TRB to anonymize 1000 TRB</source>
+        <translation>Това е най-бързият вариант, анонимизиране на 1000 TRB ще ви струва около 0.025 TRB</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Това е средно бърз вариант, анонимизиране на 1000 TRIBE ще ви струва около 0.05 TRIBE</translation>
+        <source>This option is moderately fast and will cost about 0.05 TRB to anonymize 1000 TRB</source>
+        <translation>Това е средно бърз вариант, анонимизиране на 1000 TRB ще ви струва около 0.05 TRB</translation>
     </message>
     <message>
-        <source>0.1 TRIBE per 1000 TRIBE you anonymize.</source>
-        <translation>0.1 TRIBE за всеки 1000 TRIBE които анонимизирате.</translation>
+        <source>0.1 TRB per 1000 TRB you anonymize.</source>
+        <translation>0.1 TRB за всеки 1000 TRB които анонимизирате.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1431,8 +1431,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Количество и цикли:</translation>
     </message>
     <message>
-        <source>0 TRIBE / 0 Rounds</source>
-        <translation>0 TRIBE / 0 Цикъла</translation>
+        <source>0 TRB / 0 Rounds</source>
+        <translation>0 TRB / 0 Цикъла</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -3276,8 +3276,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Изпращане</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRIBE.</source>
-        <translation>InstantX не поддържа изпращане на толкова големи суми. Транзакциите са ограничени до %1 TRIBE.</translation>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRB.</source>
+        <translation>InstantX не поддържа изпращане на толкова големи суми. Транзакциите са ограничени до %1 TRB.</translation>
     </message>
 </context>
 <context>
@@ -3390,8 +3390,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Не са намерени достатъчно Darksend деноминирани средства за тази транзакция.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Не са намерени достатъчно Darksend неденоминирани средства за тази транзакция, които не са равни на 1000 TRIBE.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Не са намерени достатъчно Darksend неденоминирани средства за тази транзакция, които не са равни на 1000 TRB.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3634,12 +3634,12 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Грешка: Открит е неподдържан аргумент -socks .настройка SOCKS версия вече не е възможна, само SOCKS5 прокси се поддържа.</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Такси (в TRIBE/Kb) по-малки от това се считат за нулева такса за прилагане (по подразбиране: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Такси (в TRB/Kb) по-малки от това се считат за нулева такса за прилагане (по подразбиране: %s)</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Такси (в TRIBE/Kb) по-малки от това се считат за нулева такса при създаване на транзакция (по подразбиране: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Такси (в TRB/Kb) по-малки от това се считат за нулева такса при създаване на транзакция (по подразбиране: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3725,8 +3725,8 @@ for example: alertnotify=echo %%s | mail -s "Tribe Alert" admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Не са намерени достатъчно  средства за тази транзакция, които не са равни на 1000 TRIBE.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Не са намерени достатъчно  средства за тази транзакция, които не са равни на 1000 TRB.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3839,8 +3839,8 @@ for example: alertnotify=echo %%s | mail -s "Tribe Alert" admin@foo.com
         <translation>Грешка:Открит е неподдържан аргумент -tor, моля използвай -onion.</translation>
     </message>
     <message>
-        <source>Fee (in TRIBE/kB) to add to transactions you send (default: %s)</source>
-        <translation>Такси (в TRIBE/Kb) добавена към направената транзакция(по подразбиране: %s)</translation>
+        <source>Fee (in TRB/kB) to add to transactions you send (default: %s)</source>
+        <translation>Такси (в TRB/Kb) добавена към направената транзакция(по подразбиране: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4207,7 +4207,7 @@ for example: alertnotify=echo %%s | mail -s "Tribe Alert" admin@foo.com
         <translation>KeePassHttp ключ за  AES криптирана връзка с KeePass</translation>
     </message>
     <message>
-        <source>Keep N TRIBE anonymized (default: %u)</source>
+        <source>Keep N TRB anonymized (default: %u)</source>
         <translation>Поддържай N Tribe анонимизирани (по подразбиране: %u)</translation>
     </message>
     <message>

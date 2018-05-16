@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case TRIBE: return QString("TRIBE");
-            case mTRIBE: return QString("mTRIBE");
-            case uTRIBE: return QString::fromUtf8("μTRIBE");
+            case TRIBE: return QString("TRB");
+            case mTRIBE: return QString("mTRB");
+            case uTRIBE: return QString::fromUtf8("μTRB");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case TRIBE: return QString("tTRIBE");
-            case mTRIBE: return QString("mtTRIBE");
-            case uTRIBE: return QString::fromUtf8("μtTRIBE");
+            case TRIBE: return QString("tTRB");
+            case mTRIBE: return QString("mtTRB");
+            case uTRIBE: return QString::fromUtf8("μtTRB");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }

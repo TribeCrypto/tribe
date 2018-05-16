@@ -176,8 +176,8 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRIBE&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakon ja unohdat salasanan, &lt;b&gt;MENETÄT KAIKKI TRIBEisi&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TRB&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakon ja unohdat salasanan, &lt;b&gt;MENETÄT KAIKKI TRBisi&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -864,11 +864,11 @@ Osoite: %4
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 TRIBE</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 TRB</source>
         <translation>Käytä 2 erillistä masternodea sekoittaaksesi varoja</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 TRIBE</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 TRB</source>
         <translation>Käytä 8 erillistä masternodea sekoittaaksesi varoja</translation>
     </message>
     <message>
@@ -876,16 +876,16 @@ Osoite: %4
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 TRIBE kun anonymisoidaan 1000 TRIBE</translation>
+        <source>This option is the quickest and will cost about ~0.025 TRB to anonymize 1000 TRB</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 TRB kun anonymisoidaan 1000 TRB</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 TRIBE to anonymize 1000 TRIBE</source>
-        <translation>Tämä vaihtoehto on keskinopea ja maksaa noin ~0.05 TRIBE kun anonymisoidaan 1000 TRIBE</translation>
+        <source>This option is moderately fast and will cost about 0.05 TRB to anonymize 1000 TRB</source>
+        <translation>Tämä vaihtoehto on keskinopea ja maksaa noin ~0.05 TRB kun anonymisoidaan 1000 TRB</translation>
     </message>
     <message>
-        <source>0.1 TRIBE per 1000 TRIBE you anonymize.</source>
-        <translation>0.1 TRIBE maksu per 1000 TRIBE jonka anonymisoit.</translation>
+        <source>0.1 TRB per 1000 TRB you anonymize.</source>
+        <translation>0.1 TRB maksu per 1000 TRB jonka anonymisoit.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1432,8 +1432,8 @@ https://www.transifex.com/projects/p/tribe/</translation>
         <translation>Määrä ja Kierrokset:</translation>
     </message>
     <message>
-        <source>0 TRIBE / 0 Rounds</source>
-        <translation>0 TRIBE / 0 Kierrosta</translation>
+        <source>0 TRB / 0 Rounds</source>
+        <translation>0 TRB / 0 Kierrosta</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -3281,8 +3281,8 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Lähetä Tribeeja</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRIBE.</source>
-        <translation>InstantX ei tue näin korkeaa lähetysmäärää vielä. Siirtotapahtumat on tällä hetkellä rajoitettu %1 TRIBE.</translation>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 TRB.</source>
+        <translation>InstantX ei tue näin korkeaa lähetysmäärää vielä. Siirtotapahtumat on tällä hetkellä rajoitettu %1 TRB.</translation>
     </message>
 </context>
 <context>
@@ -3395,8 +3395,8 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Ei tarpeeksi Darksend anonymisoituja varoja tälle siirtotapahtumalle.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Ei tarpeeksi Darksend ei-anonymisoituja varoja tälle siirtotapahtumalle, joka ei ole 1000 TRIBE.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Ei tarpeeksi Darksend ei-anonymisoituja varoja tälle siirtotapahtumalle, joka ei ole 1000 TRB.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3639,12 +3639,12 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Virhe: Ei tuettu argumentti -socks. SOCKS version asettaminen ei ole enää mahdollista, vain SOCKS5 proxyt ovat tuettuja.</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Siirtomaksut (TRIBE/Kb) jotka ovat pienempiä kuin tämä, tulkitaan nollamaksuksi välityksessä (oletus: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Siirtomaksut (TRB/Kb) jotka ovat pienempiä kuin tämä, tulkitaan nollamaksuksi välityksessä (oletus: %s)</translation>
     </message>
     <message>
-        <source>Fees (in TRIBE/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Siirtomaksut (TRIBE/Kb) jotka ovat pienempiä kuin tämä, tulkitaan nollamaksuksi siirtotapahtuman luonnissa (oletus: %s)</translation>
+        <source>Fees (in TRB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Siirtomaksut (TRB/Kb) jotka ovat pienempiä kuin tämä, tulkitaan nollamaksuksi siirtotapahtuman luonnissa (oletus: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3741,8 +3741,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Tribe Hälytys" admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRIBE.</source>
-        <translation>Ei tarpeeksi varoja tälle siirtotapahtumalle, joka ei ole 1000 TRIBE.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 TRB.</source>
+        <translation>Ei tarpeeksi varoja tälle siirtotapahtumalle, joka ei ole 1000 TRB.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3855,8 +3855,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Tribe Hälytys" admin@foo.com
         <translation>Virhe: Ei tuettu argumentti -tor löytyi, käytä -onion.</translation>
     </message>
     <message>
-        <source>Fee (in TRIBE/kB) to add to transactions you send (default: %s)</source>
-        <translation>Lisättävä siirtomaksu (TRIBE/Kb) siirtotapahtumaan jonka lähetät (oletus: %s)</translation>
+        <source>Fee (in TRB/kB) to add to transactions you send (default: %s)</source>
+        <translation>Lisättävä siirtomaksu (TRB/Kb) siirtotapahtumaan jonka lähetät (oletus: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4223,8 +4223,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Tribe Hälytys" admin@foo.com
         <translation>KeePassHttp avain AES salattuun viestintään</translation>
     </message>
     <message>
-        <source>Keep N TRIBE anonymized (default: %u)</source>
-        <translation>Pidä N TRIBE anonymisoituna (oletus: %u)</translation>
+        <source>Keep N TRB anonymized (default: %u)</source>
+        <translation>Pidä N TRB anonymisoituna (oletus: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
