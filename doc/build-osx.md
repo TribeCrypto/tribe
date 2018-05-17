@@ -32,7 +32,8 @@ Instructions: Homebrew
 
 #### Install dependencies using Homebrew
 
-    brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 libevent
+    brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config qt5 libevent
+    brew install protobuf@2.6 --c++11
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. As such, building with Qt5 is recommended.
 
@@ -49,8 +50,8 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
         ./autogen.sh
         export CXXFLAGS=-std=c++11
-        ./configure
-        make
+        ./configure --with-protoc-bindir=/usr/local/Cellar/protobuf@2.6/2.6.0/bin/
+        make -j4
 
 3.  It is also a good idea to build and run the unit tests:
 
@@ -103,7 +104,7 @@ directory. We have to first create the RPC configuration file, though.
 Run `./tribed` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=triberpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Tribe/tribe.conf"
+    echo -e "rpcuser=triberpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/tribe/tribe.conf"
     chmod 600 "/Users/${USER}/Library/Application Support/tribe/tribe.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
