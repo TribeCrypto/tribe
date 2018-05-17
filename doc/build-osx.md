@@ -40,7 +40,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 1. Clone the GitHub tree to get the source code and go into the directory.
 
-        git clone https://github.com/tribepay/tribe.git
+        git clone https://github.com/TribeCrypto/tribe.git
         cd tribe
 
 2.  Build tribe-core:
@@ -48,6 +48,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
     You can disable the gui build by passing `--without-gui` to configure.
 
         ./autogen.sh
+        export CXXFLAGS=-std=c++11
         ./configure
         make
 
@@ -81,7 +82,7 @@ You can ignore this section if you are building `tribed` for your own use.
 
 tribed/tribe-cli binaries are not included in the Tribe-Qt.app bundle.
 
-If you are building `tribed` or `Dsah Core` for others, your build machine should be set up
+If you are building `tribed` or `Tribe Core` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -103,13 +104,13 @@ Run `./tribed` to get the filename where it should be put, or just try these
 commands:
 
     echo -e "rpcuser=triberpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Tribe/tribe.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Tribe/tribe.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/tribe/tribe.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/Tribe/debug.log
+    tail -f $HOME/Library/Application\ Support/tribe/debug.log
 
 Other commands:
 -------
