@@ -122,8 +122,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xe5a5eda714b503cba8f94fd77ea3160107a2052eb3f7fd59c96ab7e05945ad6f"));
 
 
-        vSeeds.push_back(CDNSSeedData("tribe-seed-01.blocks.ninja", "13.81.82.28"));
-        vSeeds.push_back(CDNSSeedData("tribe-seed-02.blocks.ninja", "13.95.198.229"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed1.tribecrypto.net"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed2.tribecrypto.net"));
 
 
         // Tribe addresses start with 'D'
