@@ -42,6 +42,10 @@ using namespace std;
  * If 'height' is nonnegative, compute the estimate at the time when a given block was found.
  */
 UniValue GetNetworkHashPS(int lookup, int height) {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
+
     CBlockIndex *pb = chainActive.Tip();
 
     if (height >= 0 && height < chainActive.Height())
