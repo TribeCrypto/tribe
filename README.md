@@ -1,4 +1,4 @@
-Tribe Core staging tree 1.0.0
+Tribe Core staging tree 1.0.1
 
 [Official Forum](https://bitcointalk.org/index.php?topic=).
 ===============================
