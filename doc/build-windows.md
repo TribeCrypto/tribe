@@ -1,6 +1,12 @@
 WINDOWS BUILD NOTES
 ====================
 
+With the release of Win 10, the easiest way to build the wallet is using the new Windows Subsystem for Linux (WSL)
+
+Follow this guide: https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md#cross-compilation
+
+The old version:
+
 Some notes on how to build Tribe Core for Windows.
 
 Most developers use cross-compilation from Ubuntu to build executables for
