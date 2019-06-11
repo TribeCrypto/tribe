@@ -220,8 +220,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         
-        vSeeds.push_back(CDNSSeedData("tribe-seed-01.blocks.ninja", "13.81.82.28"));
-        vSeeds.push_back(CDNSSeedData("tribe-seed-02.blocks.ninja", "13.95.198.229"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed1.tribecrypto.net"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed2.tribecrypto.net"));
         
         // Testnet tribe addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
