@@ -21,9 +21,9 @@
 #include "spork.h"
 #include "txmempool.h"
 #include "util.h"
-#ifdef ENABLE_WALLET
+
 #include "masternode-sync.h"
-#endif
+
 #include "utilstrencodings.h"
 #include "validationinterface.h"
 
@@ -42,6 +42,10 @@ using namespace std;
  * If 'height' is nonnegative, compute the estimate at the time when a given block was found.
  */
 UniValue GetNetworkHashPS(int lookup, int height) {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
+
     CBlockIndex *pb = chainActive.Tip();
 
     if (height >= 0 && height < chainActive.Height())
@@ -80,6 +84,9 @@ UniValue GetNetworkHashPS(int lookup, int height) {
 
 UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() > 2)
         throw runtime_error(
             "getnetworkhashps ( blocks height )\n"
@@ -102,6 +109,9 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 
 UniValue getgenerate(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getgenerate\n"
@@ -121,6 +131,9 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
 
 UniValue generate(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() < 1 || params.size() > 1)
         throw runtime_error(
             "generate numblocks\n"
@@ -191,6 +204,9 @@ UniValue generate(const UniValue& params, bool fHelp)
 
 UniValue setgenerate(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "setgenerate generate ( genproclimit )\n"
@@ -235,6 +251,9 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
 
 UniValue getmininginfo(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getmininginfo\n"
@@ -279,6 +298,9 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
 // NOTE: Unlike wallet RPC (which use BTC values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
 UniValue prioritisetransaction(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() != 3)
         throw runtime_error(
             "prioritisetransaction <txid> <priority delta> <fee delta>\n"
@@ -328,6 +350,9 @@ static UniValue BIP22ValidationResult(const CValidationState& state)
 
 UniValue getblocktemplate(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getblocktemplate ( \"jsonrequestobject\" )\n"
@@ -635,6 +660,10 @@ protected:
 
 UniValue submitblock(const UniValue& params, bool fHelp)
 {
+	if(!masternodeSync.IsBlockchainSynced()) {
+		throw runtime_error("Wallet not synced");
+	}
+
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "submitblock \"hexdata\" ( \"jsonparametersobject\" )\n"
