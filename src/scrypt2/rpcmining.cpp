@@ -13,6 +13,8 @@
 using namespace json_spirit;
 using namespace std;
 
+namespace scrypt2;
+
 Value getsubsidy(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() > 1)
