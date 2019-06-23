@@ -148,7 +148,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3";
+        strSporkKey = "0123456789438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3";
         strMasternodePaymentsPubKey = "023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3";
 
         checkpointData = (CCheckpointData) {

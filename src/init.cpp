@@ -112,6 +112,18 @@ enum BindFlags {
 static const char* FEE_ESTIMATES_FILENAME="fee_estimates.dat";
 CClientUIInterface uiInterface; // Declared but not defined in ui_interface.h
 
+#if defined(USE_SSE2)
+#if !defined(MAC_OSX) && (defined(_M_IX86) || defined(__i386__) || defined(__i386))
+#ifdef _MSC_VER
+// MSVC 64bit is unable to use inline asm
+#include <intrin.h>
+#else
+// GCC Linux or i686-w64-mingw32
+#include <cpuid.h>
+#endif
+#endif
+#endif
+
 //////////////////////////////////////////////////////////////////////////////
 //
 // Shutdown
@@ -1220,6 +1232,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     }
 
     int64_t nStart;
+
+#if defined(USE_SSE2)
+    scrypt_detect_sse2(cpuid_edx);
+#endif
 
     // ********************************************************* Step 5: Backup wallet and verify wallet database integrity
 #ifdef ENABLE_WALLET
