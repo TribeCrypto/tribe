@@ -14,8 +14,11 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-	return scryptHash(BEGIN(nVersion), END(nNonce));
-    return HashX11(BEGIN(nVersion), END(nNonce));
+     uint256 thash;
+     scryptHash(BEGIN(nVersion), BEGIN(thash));
+     return thash;
+
+//    return HashX11(BEGIN(nVersion), END(nNonce));
 }
 
 std::string CBlock::ToString() const
