@@ -9,9 +9,12 @@
 #include "tinyformat.h"
 #include "utilstrencodings.h"
 #include "crypto/common.h"
+#include "scrypt.h"
+
 
 uint256 CBlockHeader::GetHash() const
 {
+	return scryptHash(BEGIN(nVersion), END(nNonce));
     return HashX11(BEGIN(nVersion), END(nNonce));
 }
 
