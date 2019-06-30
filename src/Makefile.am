@@ -1,7 +1,7 @@
 DIST_SUBDIRS = secp256k1 univalue
 
 AM_LDFLAGS = $(PTHREAD_CFLAGS) $(LIBTOOL_LDFLAGS) $(HARDENED_LDFLAGS)
-AM_CXXFLAGS = $(HARDENED_CXXFLAGS)
+AM_CXXFLAGS = $(HARDENED_CXXFLAGS) -save-temps
 AM_CPPFLAGS = $(HARDENED_CPPFLAGS)
 
 if EMBEDDED_LEVELDB
@@ -346,6 +346,8 @@ libbitcoin_common_a_SOURCES = \
   script/sign.cpp \
   script/standard.cpp \
   spork.cpp \
+  scrypt.h \
+  scrypt.cpp \
   $(BITCOIN_CORE_H)
 
 # util: shared between all executables.
@@ -499,6 +501,32 @@ CLEANFILES += zmq/*.gcda zmq/*.gcno
 DISTCLEANFILES = obj/build.h
 
 EXTRA_DIST = leveldb
+
+OBJS = obj/scrypt-arm.o obj/scrypt-x86.o obj/scrypt-x64.o
+
+obj/scrypt-x86.o: scrypt-x86.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+obj/scrypt-x64.o: scrypt-x64.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+obj/scrypt-arm.o: scrypt-arm.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+OBJS += obj/sha2-arm.o obj/sha2-x86.o obj/sha2-x64.o
+
+obj/sha2-x86.o: sha2-x86.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+obj/sha2-x64.o: sha2-x64.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+obj/sha2-arm.o: sha2-arm.S
+	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
+
+
+	-$(MAKE) -C sha2-x64.o crypt-x64.o
+
 
 clean-local:
 	-$(MAKE) -C leveldb clean

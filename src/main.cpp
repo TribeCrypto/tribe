@@ -67,9 +67,6 @@ CCriticalSection cs_main;
 
 BlockMap mapBlockIndex;
 
-CBigNum bnProofOfWorkLimit(~uint256(0) >> 11);  // standard scrypt^2 minimum difficulty (0.00000048)
-CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 11);
-
 CChain chainActive;
 CBlockIndex *pindexBestHeader = NULL;
 int64_t nTimeBestReceived = 0;
