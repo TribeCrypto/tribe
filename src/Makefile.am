@@ -235,6 +235,8 @@ libbitcoin_server_a_SOURCES = \
   txmempool.cpp \
   validationinterface.cpp \
   versionbits.cpp \
+  scrypt-x64.S \
+  sha2-x64.S \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
@@ -348,6 +350,8 @@ libbitcoin_common_a_SOURCES = \
   spork.cpp \
   scrypt.h \
   scrypt.cpp \
+  scrypt-x64.S \
+  sha2-x64.S \
   $(BITCOIN_CORE_H)
 
 # util: shared between all executables.
@@ -524,8 +528,6 @@ obj/sha2-x64.o: sha2-x64.S
 obj/sha2-arm.o: sha2-arm.S
 	$(CXX) -c $(CFLAGS) -MMD -o $@ $<
 
-
-	-$(MAKE) -C sha2-x64.o crypt-x64.o
 
 
 clean-local:

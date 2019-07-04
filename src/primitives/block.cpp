@@ -10,15 +10,17 @@
 #include "utilstrencodings.h"
 #include "crypto/common.h"
 #include "scrypt.h"
+#include "chainparams.h"
 
 
 uint256 CBlockHeader::GetHash() const
 {
-     uint256 thash;
-     scryptHash(BEGIN(nVersion), BEGIN(thash));
-     return thash;
-
-//    return HashX11(BEGIN(nVersion), END(nNonce));
+	if(Params().NetworkIDString() == CBaseChainParams::TESTNET){
+		 uint256 thash;
+		 scryptHash(BEGIN(nVersion), BEGIN(thash));
+		 return thash;
+	}
+	else return HashX11(BEGIN(nVersion), END(nNonce));
 }
 
 std::string CBlock::ToString() const
