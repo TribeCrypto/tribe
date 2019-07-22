@@ -15,7 +15,8 @@
 
 uint256 CBlockHeader::GetHash() const
 {
-	if(Params().NetworkIDString() == CBaseChainParams::TESTNET){
+
+	if(isInitialized() && Params().NetworkIDString().compare(CBaseChainParams::TESTNET)==0){
 		 uint256 thash;
 		 scryptHash(BEGIN(nVersion), BEGIN(thash));
 		 return thash;

@@ -52,7 +52,6 @@ public:
 
         MAX_BASE58_TYPES
     };
-
     const Consensus::Params& GetConsensus() const { return consensus; }
     const CMessageHeader::MessageStartChars& MessageStart() const { return pchMessageStart; }
     const std::vector<unsigned char>& AlertKey() const { return vAlertPubKey; }
@@ -124,5 +123,6 @@ CChainParams& Params(const std::string& chain);
  * @throws std::runtime_error when the chain is not supported.
  */
 void SelectParams(const std::string& chain);
+bool isInitialized();
 
 #endif // BITCOIN_CHAINPARAMS_H

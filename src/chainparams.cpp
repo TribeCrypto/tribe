@@ -345,6 +345,10 @@ const CChainParams &Params() {
     return *pCurrentParams;
 }
 
+bool isInitialized() {
+	return pCurrentParams!=0;
+}
+
 CChainParams& Params(const std::string& chain)
 {
     if (chain == CBaseChainParams::MAIN)
