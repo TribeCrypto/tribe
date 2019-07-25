@@ -81,6 +81,17 @@ public:
     std::string SporkKey() const { return strSporkKey; }
     std::string MasternodePaymentPubKey() const { return strMasternodePaymentsPubKey; }
     int MasternodePaymentsIncreasePeriod() const { return nMasternodePaymentsIncreasePeriod; }
+    void setSporkKey(std::string newKey) {}
+    void setMasternodePaymentPubKey(std::string newKey) {}
+
+    void setMainSporkKey(std::string newKey) {
+    	CChainParams::strSporkKey=newKey;
+    }
+
+    void setMainMasternodePaymentPubKey(std::string newKey) {
+    	CChainParams::strMasternodePaymentsPubKey=newKey;
+    }
+
 protected:
     CChainParams() {}
 
@@ -124,5 +135,7 @@ CChainParams& Params(const std::string& chain);
  * @throws std::runtime_error when the chain is not supported.
  */
 void SelectParams(const std::string& chain);
+
+
 
 #endif // BITCOIN_CHAINPARAMS_H
