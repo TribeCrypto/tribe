@@ -181,7 +181,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, CAmount nFe
 }
 
 int CMasternodePayments::GetMinMasternodePaymentsProto() {
-	return pCurrentBlockIndex->nHeight > 4000000 ?
+	return pCurrentBlockIndex->nHeight >= 330000 ?
 			MIN_MASTERNODE_PAYMENT_PROTO_VERSION_2 :
 			MIN_MASTERNODE_PAYMENT_PROTO_VERSION_1;
 
