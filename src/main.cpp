@@ -1046,14 +1046,12 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, int nHeig
     	//Change sporkkey
 
     	myparams.setMainSporkKey("023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3");
-        myparams.setMainMasternodePaymentPubKey("023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3");
     }
     if (nHeight >= 326203) {
     	CChainParams myparams =Params(CBaseChainParams::MAIN);
     	//Change sporkkey
 
     	myparams.setMainSporkKey("04eaaedc5c9a92474feddcea44d170d2f312c5143f1755c918f22a9cb167a335ebe192b0bacb1018ebb953497b5b1682cafe29e3851cf4f42a020d01fd2621f82a");
-        myparams.setMainMasternodePaymentPubKey("04eaaedc5c9a92474feddcea44d170d2f312c5143f1755c918f22a9cb167a335ebe192b0bacb1018ebb953497b5b1682cafe29e3851cf4f42a020d01fd2621f82a");
     }
 
     return true;

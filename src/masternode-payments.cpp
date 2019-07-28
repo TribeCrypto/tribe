@@ -187,7 +187,7 @@ int CMasternodePayments::GetMinMasternodePaymentsProto() {
 
 	/*
     return IsSporkActive(SPORK_10_MASTERNODE_PAY_UPDATED_NODES)
-            ? MIN_M	ASTERNODE_PAYMENT_PROTO_VERSION_2
+            ? MIN_MASTERNODE_PAYMENT_PROTO_VERSION_2
             : MIN_MASTERNODE_PAYMENT_PROTO_VERSION_1;*/
 }
 
