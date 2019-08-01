@@ -185,7 +185,7 @@ int CMasternodePayments::GetMinMasternodePaymentsProto() {
 
     LogPrintf("GetMinMasternodePaymentsProto blockheight %d " + pCurrentBlockIndex->nHeight);
 
-    int newProto = 329693;
+    int newProto = 330500;
 
     int protoVersion =
     		pCurrentBlockIndex->nHeight >= newProto ?
