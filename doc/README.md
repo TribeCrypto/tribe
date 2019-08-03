@@ -1,4 +1,4 @@
-Tribe Core 0.12.1
+Tribe Core 
 =====================
 
 This is the official reference wallet for Tribe digital currency and comprises the backbone of the Tribe peer-to-peer network. You can [download Tribe Core](https://www.tribe.org/downloads/) or [build it yourself](#building) using the guides below.

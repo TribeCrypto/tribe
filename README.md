@@ -1,4 +1,4 @@
-Tribe Core staging tree 1.0.1
+Tribe Core staging tree 1.0.2
 
 [Official Forum](https://bitcointalk.org/index.php?topic=).
 ===============================
@@ -61,4 +61,4 @@ to add a test plan to the pull request description if testing the changes is
 not straightforward.
 
 # TRIBE-source
-1.0.1
+1.0.2
