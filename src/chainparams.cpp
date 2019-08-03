@@ -148,7 +148,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3";
+        strSporkKey = "04eaaedc5c9a92474feddcea44d170d2f312c5143f1755c918f22a9cb167a335ebe192b0bacb1018ebb953497b5b1682cafe29e3851cf4f42a020d01fd2621f82a";
         strMasternodePaymentsPubKey = "023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3";
 
         checkpointData = (CCheckpointData) {
@@ -220,8 +220,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         
-        vSeeds.push_back(CDNSSeedData("tribe-seed-01.blocks.ninja", "13.81.82.28"));
-        vSeeds.push_back(CDNSSeedData("tribe-seed-02.blocks.ninja", "13.95.198.229"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed1.tribecrypto.net"));
+        vSeeds.push_back(CDNSSeedData("tribecrypto.net", "dnsseed2.tribecrypto.net"));
         
         // Testnet tribe addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
@@ -362,3 +362,4 @@ void SelectParams(const std::string& network)
     SelectBaseParams(network);
     pCurrentParams = &Params(network);
 }
+
