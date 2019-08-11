@@ -1787,14 +1787,22 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     LogPrint("subsidy", "GetMasternodePayment: p40_period=%u\n", p40_period);
     LogPrint("subsidy", "GetMasternodePayment: p50_period=%u\n", p50_period);
 
+    LogPrintf("nHeight %d\n",nHeight);
+
+    CAmount out;
+
     if (nHeight >= p50_period)
-        return blockValue * 0.5;
+        out = blockValue * 0.5;
     else if (nHeight >= p40_period) 
-        return blockValue * 0.4;
+        out = blockValue * 0.4;
     else if (nHeight >= p30_period) 
-        return blockValue * 0.3;
+        out = blockValue * 0.3;
     else 
-        return blockValue * 0.2;
+        out = blockValue * 0.2;
+
+    LogPrintf("MasternodePayment %f\n",out);
+
+    return out;
 }
 
 bool IsInitialBlockDownload()
