@@ -1713,8 +1713,12 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 {
     double dDiff = (double)0x0000ffff / (double)(nPrevBits & 0x00ffffff);
 
+    LogPrintf("dDiff %f\n", dDiff);
+
     /* fixed bug caused diff to not be correctly calculated */
     if(nPrevHeight > 4500 || Params().NetworkIDString() != CBaseChainParams::MAIN) dDiff = ConvertBitsToDouble(nPrevBits);
+
+    LogPrintf("dDiff %f\n", dDiff);
 
     CAmount nSubsidy = 0;
     LogPrint("subsidy", "GetBlockSubsidy:: nPrevHeight=%u\n", nPrevHeight);
@@ -1724,15 +1728,21 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
             if((nPrevHeight >= 17000 && dDiff > 75) || nPrevHeight >= 24000) { // GPU/ASIC difficulty calc
                 // 2222222/(((x+2600)/9)^2)
                 nSubsidy = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
+                LogPrintf("1 nSubsidy %f\n", dDiff);
+                double x = (pow((dDiff+2600.0)/9.0,2.0));
+                LogPrintf("x %f\n", x);
+
                 if (nSubsidy > 25) nSubsidy = 25;
                 if (nSubsidy < 5) nSubsidy = 5;
             } else { // CPU mining calc
                 nSubsidy = (11111.0 / (pow((dDiff+51.0)/6.0,2.0)));
+                LogPrintf("2 nSubsidy %f pow... %f", nSubsidy , (pow((dDiff+51.0)/6.0,2.0)));
                 if (nSubsidy > 500) nSubsidy = 500;
                 if (nSubsidy < 25) nSubsidy = 25;
             }
         } else {
             nSubsidy = (1111.0 / (pow((dDiff+1.0),2.0)));
+            LogPrintf("3 nSubsidy %f pow... %f", nSubsidy ,(pow((dDiff+1.0),2.0)));
             if (nSubsidy > 500) nSubsidy = 500;
             if (nSubsidy < 1) nSubsidy = 1;
         }
@@ -1743,6 +1753,8 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         else
             nSubsidy = 40.0 - (37.0 * pow(0.9915,dDiff));
             
+        LogPrintf("4 nSubsidy %f pow... %f", nSubsidy ,pow(0.9915,dDiff/11000));
+
         if (nSubsidy > 40) nSubsidy = 40;
         if (nSubsidy < 3) nSubsidy = 3;
     }
@@ -1750,11 +1762,14 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     // LogPrintf("height %u diff %4.2f reward %i \n", nPrevHeight, dDiff, nSubsidy);
     nSubsidy *= COIN;
 
+    LogPrintf("5 nSubsidy %f\n", nSubsidy);
     // yearly decline of production by 7.1% per year, projected 21.3M coins max by year 2050.
     for(int i = consensusParams.nSubsidyHalvingInterval; i <= nPrevHeight; i += consensusParams.nSubsidyHalvingInterval) nSubsidy -= nSubsidy/14;
+    LogPrintf("6 nSubsidy %f\n", nSubsidy);
 
     // Hard fork to reduce the block reward by 10 extra percent (allowing budget super-blocks)
     if(nPrevHeight > consensusParams.nBudgetPaymentsStartBlock) nSubsidy -= nSubsidy/10;
+    LogPrintf("7 nSubsidy %f\n", nSubsidy);
 
     LogPrint("subsidy", "GetBlockSubsidy:: nSubsidy=%u\n", nSubsidy);
     return nSubsidy;
