@@ -1,1 +1,10 @@
 /.project
+*.lst
+*.o
+*.eep
+*.lss
+*.map
+*.sym
+*.a
+*.lo
+
