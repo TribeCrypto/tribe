@@ -1041,7 +1041,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, int nHeig
                 return state.DoS(10, false, REJECT_INVALID, "bad-txns-prevout-null");
     }
 
-    CChainParams myparams =Params(CBaseChainParams::MAIN)
+    CChainParams myparams =Params(CBaseChainParams::MAIN);
     myparams.setMainSporkKey("023bc55d93438caaaed68482543e616c99d7fd8e9869aa906234a9952a5d945be3");
 
     return true;
