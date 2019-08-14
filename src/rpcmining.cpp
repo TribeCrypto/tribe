@@ -42,7 +42,7 @@ using namespace std;
  * If 'height' is nonnegative, compute the estimate at the time when a given block was found.
  */
 UniValue GetNetworkHashPS(int lookup, int height) {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
 
@@ -84,7 +84,7 @@ UniValue GetNetworkHashPS(int lookup, int height) {
 
 UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() > 2)
@@ -109,7 +109,7 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 
 UniValue getgenerate(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() != 0)
@@ -131,7 +131,7 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
 
 UniValue generate(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() < 1 || params.size() > 1)
@@ -204,7 +204,7 @@ UniValue generate(const UniValue& params, bool fHelp)
 
 UniValue setgenerate(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() < 1 || params.size() > 2)
@@ -251,7 +251,7 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
 
 UniValue getmininginfo(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() != 0)
@@ -298,7 +298,7 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
 // NOTE: Unlike wallet RPC (which use BTC values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
 UniValue prioritisetransaction(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() != 3)
@@ -350,7 +350,7 @@ static UniValue BIP22ValidationResult(const CValidationState& state)
 
 UniValue getblocktemplate(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
     if (fHelp || params.size() > 1)
@@ -660,7 +660,7 @@ protected:
 
 UniValue submitblock(const UniValue& params, bool fHelp)
 {
-	if(!masternodeSync.IsBlockchainSynced()) {
+	if(Params().NetworkIDString()==CBaseChainParams::MAIN && !masternodeSync.IsBlockchainSynced()) {
 		throw runtime_error("Wallet not synced");
 	}
 
