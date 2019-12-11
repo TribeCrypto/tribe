@@ -8,6 +8,7 @@
 #include "pubkey.h"
 #include "chain.h"
 #include "sync.h"
+#include "main.h"
 
 CChain chainActive;
 
@@ -87,5 +88,5 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
 
 int GetHeight()
 {
-    return chainActive.Height();
+    return GetHashHeight();
 }

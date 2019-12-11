@@ -6487,3 +6487,8 @@ public:
         mapOrphanTransactionsByPrev.clear();
     }
 } instance_of_cmaincleanup;
+
+int GetHashHeight() {
+    LOCK(cs_main);
+    return chainActive.Height();
+}
