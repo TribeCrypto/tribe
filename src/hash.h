@@ -278,11 +278,15 @@ unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char
 
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
 
+int GetHeight();
+
 /* ----------- Tribe Hash ------------------------------------------------ */
+
 template<typename T1>
 inline uint256 HashX11(const T1 pbegin, const T1 pend)
-
 {
+//If before a certain height - use old hash
+//..otherwise use new.
     sph_blake512_context     ctx_blake;
     sph_bmw512_context       ctx_bmw;
     sph_groestl512_context   ctx_groestl;
@@ -298,9 +302,17 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
     uint512 hash[11];
 
-    sph_echo512_init(&ctx_echo);
-    sph_echo512 (&ctx_echo, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));;
-    sph_echo512_close(&ctx_echo, static_cast<void*>(&hash[0]));
+	if(GetHeight()>100) {
+//New hash
+		sph_echo512_init(&ctx_echo);
+	    sph_echo512 (&ctx_echo, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));;
+	    sph_echo512_close(&ctx_echo, static_cast<void*>(&hash[0]));
+	} else {
+//Old hash
+	    sph_blake512_init(&ctx_blake);
+	    sph_blake512 (&ctx_blake, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));
+	    sph_blake512_close(&ctx_blake, static_cast<void*>(&hash[0]));
+	}
 
     sph_bmw512_init(&ctx_bmw);
     sph_bmw512 (&ctx_bmw, static_cast<const void*>(&hash[0]), 64);
@@ -338,11 +350,21 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_simd512 (&ctx_simd, static_cast<const void*>(&hash[8]), 64);
     sph_simd512_close(&ctx_simd, static_cast<void*>(&hash[9]));
 
-    sph_blake512_init(&ctx_blake);
-    sph_blake512 (&ctx_blake, static_cast<const void*>(&hash[9]), 64);
-    sph_blake512_close(&ctx_blake, static_cast<void*>(&hash[10]));
+	if(GetHeight()>100) {
+//New hash
+	    sph_blake512_init(&ctx_blake);
+	    sph_blake512 (&ctx_blake, static_cast<const void*>(&hash[9]), 64);
+	    sph_blake512_close(&ctx_blake, static_cast<void*>(&hash[10]));
+
+	} else {
+//Old hash
+	    sph_echo512_init(&ctx_echo);
+	    sph_echo512 (&ctx_echo, static_cast<const void*>(&hash[9]), 64);
+	    sph_echo512_close(&ctx_echo, static_cast<void*>(&hash[10]));
+	}
 
     return hash[10].trim256();
 }
+
 
 #endif // BITCOIN_HASH_H
