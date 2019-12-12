@@ -305,9 +305,14 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
     uint512 hash[11];
 
-    const Consensus::Params& myConsensus  = Params().GetConsensus();;
+    bool OrgHash;
 
-    if(GetHashHeight() >= myConsensus.changeHashing) {
+    if(GetHashHeight()<10 || GetHashHeight() < Params().GetConsensus().changeHashing)
+    	OrgHash = true;
+    else
+    	OrgHash = false;
+
+    if(!OrgHash) {
 //New hash
 		sph_echo512_init(&ctx_echo);
 	    sph_echo512 (&ctx_echo, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));;
@@ -355,7 +360,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_simd512 (&ctx_simd, static_cast<const void*>(&hash[8]), 64);
     sph_simd512_close(&ctx_simd, static_cast<void*>(&hash[9]));
 
-	if(GetHashHeight()>100) {
+	if(!OrgHash) {
 //New hash
 	    sph_blake512_init(&ctx_blake);
 	    sph_blake512 (&ctx_blake, static_cast<const void*>(&hash[9]), 64);
