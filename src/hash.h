@@ -305,11 +305,9 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
     uint512 hash[11];
 
-    const Consensus::Params& myConsensus;
+    const Consensus::Params& myConsensus  = Params().GetConsensus();;
 
-    myConsensus = Params().GetConsensus();
-
-    if(GetHashHeight() > myConsensus.changeHashing) {
+    if(GetHashHeight() >= myConsensus.changeHashing) {
 //New hash
 		sph_echo512_init(&ctx_echo);
 	    sph_echo512 (&ctx_echo, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));;

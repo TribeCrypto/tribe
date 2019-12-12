@@ -12,7 +12,6 @@
 #include "chainparams.h"
 
 CChain chainActivex;
-CChainParams chainParams;
 
 
 inline uint32_t ROTL32(uint32_t x, int8_t r)
