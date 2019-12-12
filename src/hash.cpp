@@ -9,8 +9,11 @@
 #include "chain.h"
 #include "sync.h"
 #include "main.h"
+#include "chainparams.h"
 
-CChain chainActive;
+CChain chainActivex;
+CChainParams chainParams;
+
 
 inline uint32_t ROTL32(uint32_t x, int8_t r)
 {
@@ -86,7 +89,7 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
     CHMAC_SHA512(chainCode.begin(), chainCode.size()).Write(&header, 1).Write(data, 32).Write(num, 4).Finalize(output);
 }
 
-int GetHeight()
+int GetHashHeight()
 {
-    return GetHashHeight();
+    return chainActivex.Height();
 }

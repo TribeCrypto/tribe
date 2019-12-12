@@ -26,6 +26,9 @@
 #include "crypto/sph_simd.h"
 #include "crypto/sph_echo.h"
 
+#include "consensus/params.h"
+#include "chainparams.h"
+
 #include <vector>
 
 typedef uint256 ChainCode;
@@ -278,7 +281,7 @@ unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char
 
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
 
-int GetHeight();
+int GetHashHeight();
 
 /* ----------- Tribe Hash ------------------------------------------------ */
 
@@ -302,7 +305,11 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
     uint512 hash[11];
 
-	if(GetHeight()>100) {
+    const Consensus::Params& myConsensus;
+
+    myConsensus = Params().GetConsensus();
+
+    if(GetHashHeight() > myConsensus.changeHashing) {
 //New hash
 		sph_echo512_init(&ctx_echo);
 	    sph_echo512 (&ctx_echo, (pbegin == pend ? pblank : static_cast<const void*>(&pbegin[0])), (pend - pbegin) * sizeof(pbegin[0]));;
@@ -350,7 +357,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_simd512 (&ctx_simd, static_cast<const void*>(&hash[8]), 64);
     sph_simd512_close(&ctx_simd, static_cast<void*>(&hash[9]));
 
-	if(GetHeight()>100) {
+	if(GetHashHeight()>100) {
 //New hash
 	    sph_blake512_init(&ctx_blake);
 	    sph_blake512 (&ctx_blake, static_cast<const void*>(&hash[9]), 64);
