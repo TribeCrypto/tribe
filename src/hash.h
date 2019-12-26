@@ -30,6 +30,9 @@
 #include "chainparams.h"
 
 #include <vector>
+#include "util.h"
+
+using std::string;
 
 typedef uint256 ChainCode;
 
@@ -311,6 +314,13 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     	OrgHash = true;
     else
     	OrgHash = false;
+
+    string ver="";
+
+    if(OrgHash) ver = "old";
+    else ver = "new";
+
+    LogPrintf("Hashing with %s algo.", ver);
 
     if(!OrgHash) {
 //New hash

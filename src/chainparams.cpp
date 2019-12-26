@@ -258,7 +258,7 @@ public:
             2800        // * estimated number of transactions per day after checkpoint
         };
 
-        consensus.changeHashing = 1682;
+        consensus.changeHashing = 10;
     }
 };
 static CTestNetParams testNetParams;
@@ -338,7 +338,7 @@ public:
         // Regtest tribe BIP32 prvkeys start with 'DPRV'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3A)(0x58)(0xF3)(0x42).convert_to_container<std::vector<unsigned char> >();
 
-        consensus.changeHashing = 1682;
+        consensus.changeHashing = 10;
 
    }
 };
