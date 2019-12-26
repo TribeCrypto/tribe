@@ -320,7 +320,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     if(OrgHash) ver = "old";
     else ver = "new";
 
-    LogPrintf("Hashing with %s algo.", ver);
+    LogPrintf("Hashing with %s algo, height %d \n", ver, GetHashHeight());
 
     if(!OrgHash) {
 //New hash
