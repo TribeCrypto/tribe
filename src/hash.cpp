@@ -11,8 +11,7 @@
 #include "main.h"
 #include "chainparams.h"
 
-CChain chainActivex;
-
+int height=-2;
 
 inline uint32_t ROTL32(uint32_t x, int8_t r)
 {
@@ -90,5 +89,9 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
 
 int GetHashHeight()
 {
-    return chainActivex.Height();
+    return height;
+}
+
+void SetHashHeight(int inheight) {
+	height=inheight;
 }

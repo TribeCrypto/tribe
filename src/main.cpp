@@ -306,6 +306,9 @@ CNodeState *State(NodeId pnode) {
 int GetHeight()
 {
     LOCK(cs_main);
+
+    SetHashHeight(chainActive.Height());
+
     return chainActive.Height();
 }
 
