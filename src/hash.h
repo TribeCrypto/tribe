@@ -285,7 +285,7 @@ unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char
 void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char header, const unsigned char data[32], unsigned char output[64]);
 
 int GetHashHeight();
-void SetHashHeight(int hashHeight);
+int GetHashMethod();
 
 /* ----------- Tribe Hash ------------------------------------------------ */
 
@@ -309,12 +309,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
     uint512 hash[11];
 
-    bool OrgHash;
-
-    if(GetHashHeight()<10 || GetHashHeight() < Params().GetConsensus().changeHashing)
-    	OrgHash = true;
-    else
-    	OrgHash = false;
+    bool OrgHash = (GetHashMethod() == 0);
 
     string ver="";
 

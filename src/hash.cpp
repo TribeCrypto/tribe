@@ -11,8 +11,6 @@
 #include "main.h"
 #include "chainparams.h"
 
-int height=-2;
-
 inline uint32_t ROTL32(uint32_t x, int8_t r)
 {
     return (x << r) | (x >> (32 - r));
@@ -89,9 +87,19 @@ void BIP32Hash(const ChainCode &chainCode, unsigned int nChild, unsigned char he
 
 int GetHashHeight()
 {
-    return height;
+    LogPrintf("GetHashHeight\n");
+
+    const CBlockIndex *pCurrentBlockIndex;
+
+    if(!pCurrentBlockIndex) return -2;
+
+    return pCurrentBlockIndex->nHeight;
 }
 
-void SetHashHeight(int inheight) {
-	height=inheight;
+int GetHashMethod() {
+    if(GetHashHeight()<10 || GetHashHeight() < Params().GetConsensus().changeHashing)
+    	return 0;  //Original method
+    else
+    	return 1;  //New method
 }
+

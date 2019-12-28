@@ -307,8 +307,6 @@ int GetHeight()
 {
     LOCK(cs_main);
 
-    SetHashHeight(chainActive.Height());
-
     return chainActive.Height();
 }
 
@@ -1012,6 +1010,8 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, int nHeig
             return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-duplicate");
         vInOutPoints.insert(txin.prevout);
     }
+
+    LogPrintf("main.cpp nHeight %d \n",nHeight);
 
     // Check for blocked inputs
     if (nHeight >= 109356 // Checkpoint-2
