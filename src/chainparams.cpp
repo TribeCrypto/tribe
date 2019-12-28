@@ -161,6 +161,9 @@ public:
                         //   (the tx=... number in the SetBestChain debug.log lines)
             2800        // * estimated number of transactions per day after checkpoint
         };
+
+        consensus.changeHashing = 430000; //The hashing-algo is changing at height 410000;
+
     }
 };
 static CMainParams mainParams;
@@ -256,6 +259,7 @@ public:
             2800        // * estimated number of transactions per day after checkpoint
         };
 
+        consensus.changeHashing = 10;
     }
 };
 static CTestNetParams testNetParams;
@@ -334,6 +338,9 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3A)(0x59)(0xEA)(0x14).convert_to_container<std::vector<unsigned char> >();
         // Regtest tribe BIP32 prvkeys start with 'DPRV'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3A)(0x58)(0xF3)(0x42).convert_to_container<std::vector<unsigned char> >();
+
+        consensus.changeHashing = 10;
+
    }
 };
 static CRegTestParams regTestParams;

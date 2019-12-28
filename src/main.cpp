@@ -43,6 +43,7 @@
 #include "utilstrencodings.h"
 #include "validationinterface.h"
 #include "versionbits.h"
+#include "hash.h"
 
 #include <sstream>
 
@@ -979,6 +980,8 @@ int GetIXConfirmations(uint256 nTXHash)
 
 bool CheckTransaction(const CTransaction& tx, CValidationState &state, int nHeight)
 {
+	SetHashHeight(nHeight);
+
     // Basic checks that don't depend on any context
     if (tx.vin.empty())
         return state.DoS(10, false, REJECT_INVALID, "bad-txns-vin-empty");
