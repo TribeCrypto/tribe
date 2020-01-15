@@ -163,7 +163,6 @@ public:
         };
 
         consensus.changeHashing = 430000; //The hashing-algo is changing at height 410000;
-
     }
 };
 static CMainParams mainParams;
